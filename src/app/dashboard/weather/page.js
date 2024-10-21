@@ -15,6 +15,7 @@ import {
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Loader from "@/components/ui/loader";
 
 // Function to generate simulated weather data
 const generateWeatherData = () => {
@@ -95,7 +96,7 @@ export default function Dashboard() {
       </Button>
 
       {loading ? (
-        <p>Loading weather data...</p>
+      <Loader/>
       ) : (
         <>
           {/* Weather Data Line Chart */}

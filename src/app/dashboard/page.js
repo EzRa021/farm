@@ -6,6 +6,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import { Chart, RealTimeCard, TrendChart } from "@/components/ui/percentChart";
+import Loader from "@/components/ui/loader";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -35,7 +36,7 @@ function Dashboard() {
     return () => unsubscribe(); 
   }, [router]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader/>;
 
   return (
     <div className="p-4">
