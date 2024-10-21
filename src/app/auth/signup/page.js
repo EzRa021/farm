@@ -5,6 +5,8 @@ import { auth, db } from "@/lib/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { toast } from "sonner";
 
 export default function SignUp() {
   const [fullName, setFullName] = useState("");
@@ -29,8 +31,8 @@ export default function SignUp() {
         fullName,
         email,
       });
+      toast("Event has been created.")
 
-      // Redirect to the dashboard
       router.push("/dashboard");
     } catch (err) {
       setError(err.message);
@@ -75,6 +77,12 @@ export default function SignUp() {
         <button type="submit" className="bg-blue-500 text-white py-2 px-4 w-full">
           Sign Up
         </button>
+        <div className="mt-4 text-center text-sm">
+            Already have an account?{" "}
+            <Link href="/auth/signin" className="underline">
+              Sign in
+            </Link>
+          </div>
       </form>
     </div>
   );

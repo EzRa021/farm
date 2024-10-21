@@ -111,7 +111,7 @@ const data = {
         },
         {
           title: " Decision Support:",
-          url: "Insight",
+          url: "insight",
         },
         {
           title: "Weather",
@@ -131,20 +131,9 @@ const data = {
       items: [
         {
           title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
+          url: "settings",
+        }
+       
       ],
     },
   ],

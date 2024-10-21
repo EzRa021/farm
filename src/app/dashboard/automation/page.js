@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
+import { toast } from "sonner";
 
 export default function Automation() {
   // States for irrigation automation
@@ -138,10 +139,10 @@ export default function Automation() {
         threshold: irrigationThreshold,
         taskType: "irrigation",
       });
-      alert("Irrigation automation rule saved!");
+      toast("Irrigation automation rule saved!");
     } catch (error) {
       console.error("Error saving irrigation rule:", error);
-      alert("Failed to save irrigation rule.");
+      toast("Failed to save irrigation rule.");
     }
     setSavingIrrigation(false);
   };
@@ -156,10 +157,10 @@ export default function Automation() {
         threshold: stockThreshold,
         taskType: "stockOrder",
       });
-      alert("Stock ordering automation rule saved!");
+      toast("Stock ordering automation rule saved!");
     } catch (error) {
       console.error("Error saving stock rule:", error);
-      alert("Failed to save stock rule.");
+      toast("Failed to save stock rule.");
     }
     setSavingStock(false);
   };
@@ -174,10 +175,10 @@ export default function Automation() {
         interval: fertilizerInterval,
         taskType: "fertilizer",
       });
-      alert("Fertilizer automation rule saved!");
+      toast("Fertilizer automation rule saved!");
     } catch (error) {
       console.error("Error saving fertilizer rule:", error);
-      alert("Failed to save fertilizer rule.");
+      toast("Failed to save fertilizer rule.");
     }
     setSavingFertilizer(false);
   };
@@ -192,10 +193,10 @@ export default function Automation() {
         threshold: pestThreshold,
         taskType: "pestControl",
       });
-      alert("Pest control automation rule saved!");
+      toast("Pest control automation rule saved!");
     } catch (error) {
       console.error("Error saving pest control rule:", error);
-      alert("Failed to save pest control rule.");
+      toast("Failed to save pest control rule.");
     }
     setSavingPestControl(false);
   };

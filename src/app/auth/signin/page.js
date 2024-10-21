@@ -4,6 +4,9 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { toast } from "sonner"
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -16,6 +19,8 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/dashboard"); // Redirect to dashboard after login
+      toast("signin successful.")
+
     } catch (err) {
       setError(err.message);
     }
@@ -49,6 +54,12 @@ export default function Login() {
         <button type="submit" className="bg-blue-500 text-white py-2 px-4 w-full">
           Login
         </button>
+        <div className="mt-4 text-center text-sm">
+            Don&apos;t have an account?{" "}
+            <Link href="/auth/signup" className="underline">
+              Sign up
+            </Link>
+          </div>
       </form>
     </div>
   );
