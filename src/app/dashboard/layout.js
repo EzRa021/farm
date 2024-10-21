@@ -1,8 +1,5 @@
 "use client"
 
-
-
-
 import * as React from "react"
 import {
   AudioWaveform,
@@ -106,11 +103,11 @@ const data = {
       isActive: true,
       items: [
         {
-          title: "Task Automation:",
+          title: "Task Automation",
           url: "automation",
         },
         {
-          title: " Decision Support:",
+          title: " Decision Support",
           url: "insight",
         },
         {
@@ -118,7 +115,7 @@ const data = {
           url: "weather",
         },
         {
-          title: "Financial Tracking:",
+          title: "Financial Tracking",
           url: "finance",
         },
       ],
