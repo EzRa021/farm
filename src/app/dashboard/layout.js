@@ -131,7 +131,7 @@ const data = {
       items: [
         {
           title: "General",
-          url: "settings",
+          url: "/dashboard/settings",
         }
        
       ],
@@ -262,7 +262,7 @@ export default function RootLayout({ children }) {
                               <SidebarMenuSubItem key={subItem.title}>
                                 <SidebarMenuSubButton asChild>
                                   <a href={subItem.url}>
-                                    <span>{subItem.title}</span>
+                                    <span className=" text-md">{subItem.title}</span>
                                   </a>
                                 </SidebarMenuSubButton>
                               </SidebarMenuSubItem>
@@ -372,19 +372,7 @@ export default function RootLayout({ children }) {
               <div className="flex items-center gap-2 px-4">
                 <SidebarTrigger className="-ml-1" />
                 <Separator orientation="vertical" className="mr-2 h-4" />
-                <Breadcrumb>
-                  <BreadcrumbList>
-                    <BreadcrumbItem className="hidden md:block">
-                      <BreadcrumbLink href="#">
-                        Building Your Application
-                      </BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator className="hidden md:block" />
-                    <BreadcrumbItem>
-                      <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-                    </BreadcrumbItem>
-                  </BreadcrumbList>
-                </Breadcrumb>
+              
               </div>
             </header>
             <ProtectedRoute>
