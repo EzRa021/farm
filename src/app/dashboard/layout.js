@@ -103,20 +103,24 @@ const data = {
       isActive: true,
       items: [
         {
+          title: "Home",
+          url: "/dashboard",
+        },
+        {
           title: "Task Automation",
-          url: "automation",
+          url: "/dashboard/automation",
         },
         {
           title: " Decision Support",
-          url: "insight",
+          url: "/dashboard/insight",
         },
         {
           title: "Weather",
-          url: "weather",
+          url: "/dashboard/weather",
         },
         {
           title: "Financial Tracking",
-          url: "finance",
+          url: "/dashboard/finance",
         },
       ],
     },
